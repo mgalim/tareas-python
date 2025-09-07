@@ -4,7 +4,9 @@ Este entregable implementa **registro de usuarios**, **inicio de sesión** y un 
 
 > **Stack:** Python 3.10+, Flask, SQLite (módulo estándar), `werkzeug.security` para hasheo de contraseñas
 
-## Endpoints
+## Repositorio
+
+[Github Link](https://github.com/mgalim/tareas-python)
 
 ## Endpoints
 
@@ -60,8 +62,17 @@ SECRET_KEY=dev-secret-1234
 
 Se incluye el archivo **`pruebas.http`** para ser utilizado con el plugin _REST Client_ de VS Code o clientes similares.  
 Permite ejecutar los endpoints `/registro`, `/login`, `/tareas` y `/logout` de manera interactiva.
+Tambien se puede probar con los template con el formulario de login
 
-**capturas de pantalla**
+**Capturas de pantalla**
+
+![alt text](images/home.png)
+![alt text](images/login.png)
+![alt text](images/prohibido.png)
+![alt text](images/logueado.png)
+![alt text](images/registro.png)
+![alt text](images/yaexiste.png)
+![alt text](images/running.png)
 
 ## Arquitectura y seguridad
 
@@ -90,6 +101,8 @@ Permite ejecutar los endpoints `/registro`, `/login`, `/tareas` y `/logout` de m
 Tareas/
 ├─ servidor.py
 ├─ requirements.txt
+├─ images
+├─ static
 ├─ data.db
 ├─ .env
 ├─ pruebas.http

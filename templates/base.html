@@ -2,7 +2,12 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <title>{% block title %}Sistema de Tareas{% endblock %}</title>
+    <title>{% block title %}Gestión de Tareas{% endblock %}</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="{{ url_for('static', filename='favicon.png') }}"
+    />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
   <body class="bg-gray-900 text-gray-100 flex flex-col min-h-screen">
