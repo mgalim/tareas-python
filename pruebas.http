@@ -1,0 +1,25 @@
+@baseUrl = http://127.0.0.1:5000
+
+### Registro de usuario
+POST {{baseUrl}}/registro
+Content-Type: application/json
+
+{
+  "usuario": "marcelo",
+  "contraseña": "1234"
+}
+
+### Login de usuario (guardar cookies de sesión)
+POST {{baseUrl}}/login
+Content-Type: application/json
+
+{
+  "usuario": "marcelo",
+  "contraseña": "1234"
+}
+
+### Acceso al panel de tareas con sesión
+GET {{baseUrl}}/tareas
+
+### Logout
+GET {{baseUrl}}/logout

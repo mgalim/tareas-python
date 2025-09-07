@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>{% block title %}Sistema de Tareas{% endblock %}</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="bg-gray-900 text-gray-100 flex flex-col min-h-screen">
+    <header class="bg-gray-800 py-4">
+      <div
+        class="max-w-[1200px] mx-auto flex justify-between items-center px-4"
+      >
+        <div class="text-green-400 font-bold text-xl">
+          PFO 2 - Gestión de tareas
+        </div>
+        <nav class="space-x-4">
+          <a href="/" class="hover:text-green-400">Inicio</a>
+          {% if not logged_in %}
+          <a href="/login_home" class="hover:text-green-400">Login</a>
+          {% else %}
+          <a href="/logout" class="hover:text-green-400">Logout</a>
+          {% endif %}
+          <a href="/tareas" class="hover:text-green-400">Tareas</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="flex-grow max-w-[1200px] mx-auto px-4 w-full">
+      {% block content %}{% endblock %}
+    </main>
+
+    <footer
+      class="bg-gray-800 text-gray-500 text-sm text-center py-4 mt-auto w-full"
+    >
+      Gestión de tareas · Flask + SQLite · Tailwind - realizado por Marcelo
+      Galimberti
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,50 @@
+{% extends "base.html" %} {% block title %}Tareas{% endblock %} {% block content
+%}
+<div
+  class="flex flex-col items-center justify-center flex-grow min-h-[calc(100vh-64px-64px)] py-10"
+>
+  <section
+    class="bg-gray-800/50 border border-gray-700 rounded-2xl p-6 w-full max-w-2xl mx-auto"
+  >
+    <h1 class="text-2xl font-bold text-green-400 mb-2">
+      Hola, {{ usuario }} 👋
+    </h1>
+    <p class="text-gray-300 mb-6">
+      Accediste correctamente al panel de tareas.
+    </p>
+
+    <div class="bg-gray-900 border border-gray-700 rounded-xl p-4">
+      <h2 class="font-semibold text-green-300 mb-3">Tus tareas</h2>
+      <ul class="space-y-2 text-gray-200">
+        <li
+          class="flex items-center justify-between bg-gray-800/60 rounded-lg p-3"
+        >
+          <span>Ejemplo: preparar endpoints CRUD</span>
+          <span
+            class="text-xs px-2 py-1 rounded bg-forest/30 border border-yellow-800 text-yellow-300"
+            >pendiente</span
+          >
+        </li>
+        <li
+          class="flex items-center justify-between bg-gray-800/60 rounded-lg p-3"
+        >
+          <span>Ejemplo: documentar en README</span>
+          <span
+            class="text-xs px-2 py-1 rounded bg-forest/30 border border-green-800 text-green-300"
+            >en progreso</span
+          >
+        </li>
+      </ul>
+      <p class="mt-4 text-sm text-gray-400">
+        Nota: Este demo no implementa CRUD de tareas; solo la puerta de acceso
+        autenticada.
+      </p>
+      <a
+        href="/logout"
+        class="inline-block mt-6 px-4 py-2 rounded-xl bg-green-700 hover:bg-green-600 text-white"
+        >Cerrar sesión</a
+      >
+    </div>
+  </section>
+</div>
+{% endblock %}

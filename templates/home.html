@@ -1,0 +1,24 @@
+{% extends "base.html" %} {% block title %}Home - Sistema de Tareas{% endblock
+%} {% block content %}
+<div
+  class="flex flex-col items-center justify-center flex-grow min-h-[calc(100vh-64px-64px)] py-10"
+>
+  <h1 class="text-green-400 text-3xl mb-4 text-center">
+    Bienvenido al Sistema de Gestión de Tareas
+  </h1>
+  <p class="text-gray-300 mb-6 text-center">
+    Gestiona tus tareas de manera simple y segura.
+  </p>
+
+  <div
+    class="bg-gray-800 p-4 rounded shadow-md inline-block text-left w-full max-w-md mx-auto"
+  >
+    <h2 class="text-green-400 mb-2 font-semibold">Demo de tareas</h2>
+    <ul class="list-disc list-inside text-gray-200">
+      <li>Tarea 1: Hacer las compras</li>
+      <li>Tarea 2: Revisar facturas impagas</li>
+      <li>Tarea 3: Revisar los neumáticos</li>
+    </ul>
+  </div>
+</div>
+{% endblock %}
