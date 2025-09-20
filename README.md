@@ -8,6 +8,10 @@ Este entregable implementa **registro de usuarios**, **inicio de sesión** y un 
 
 [Github Link](https://github.com/mgalim/tareas-python)
 
+## App desplegada en Render
+
+[Render](https://tareas-python.onrender.com/)
+
 ## Endpoints
 
 - `GET /`  
@@ -36,7 +40,7 @@ Este entregable implementa **registro de usuarios**, **inicio de sesión** y un 
 - `GET /logout`  
   Cierra la sesión y redirige a la página de inicio.
 
-## Ejecución
+## Ejecución en local, tambien puedes hacerlo por docker desktop
 
 1. Instalar dependencias:
    ```bash
@@ -46,23 +50,27 @@ Este entregable implementa **registro de usuarios**, **inicio de sesión** y un 
    ```bash
    python servidor.py
    ```
-3. Abrir en el navegador: `http://127.0.0.1:5000/`
+3. Abrir en el navegador que indica la terminal.
 
-## Configuración de SECRET_KEY
+## Configuración de SECRET_KEY para correr en local
 
 La aplicación Flask requiere un `SECRET_KEY` para firmar cookies de sesión.  
 Para simplificar, el proyecto incluye soporte de **python-dotenv**.  
 Crea un archivo `.env` en la raíz del proyecto con:
 
 ```
-SECRET_KEY=dev-secret-1234
+SECRET_KEY=tu-secreto
 ```
 
 ## Pruebas
 
-Se incluye el archivo **`pruebas.http`** para ser utilizado con el plugin _REST Client_ de VS Code o clientes similares.  
+Se incluye el archivo **`pruebas.http`** para ser utilizado con el plugin _REST Client_
+de VS Code o clientes similares.  
 Permite ejecutar los endpoints `/registro`, `/login`, `/tareas` y `/logout` de manera interactiva.
 Tambien se puede probar con los template con el formulario de login
+
+usuario: test,
+contraseña: 4567
 
 **Capturas de pantalla**
 
@@ -101,16 +109,18 @@ Tambien se puede probar con los template con el formulario de login
 Tareas/
 ├─ servidor.py
 ├─ requirements.txt
-├─ images
-├─ static
+├─ images/...
+├─ static/...
 ├─ data.db
+├─ Dockerfile
 ├─ .env
 ├─ pruebas.http
 ├─ templates/
 │  ├─ base.html
 │  ├─ home.html
-│  ├─ unauthorized.html
-│  └─ tareas.html
+│  ├─ login.html
+│  ├─ tareas.html
+│  └─ unauthorized.html
 └─ README.md
 ```
 
