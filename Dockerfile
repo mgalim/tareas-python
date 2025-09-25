@@ -17,4 +17,4 @@ COPY . .
 EXPOSE 5000
 
 # Start the Flask app
-CMD ["python", "servidor.py"]
+CMD ["gunicorn", "servidor:app", "-b", "0.0.0.0:${PORT}"]
